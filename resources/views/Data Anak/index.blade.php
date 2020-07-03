@@ -52,8 +52,8 @@
                                 <td>{{ $p->mom }}</td>
                                 <td>{{ $p->address }}</td>
                                 <td style="font-size: 20px">
-                                    <a href="{{ route('home', $p->id) }}"><i class="blue edit icon"></i></a> |
-                                    <form action="{{ route('home', $p->id)}}" method="post" class="d-inline">
+                                    <a href="{{ route('babies.edit', $p->id) }}"><i class="blue edit icon"></i></a> |
+                                    <form action="{{ route('babies.edit', $p->id)}}" method="post" class="d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" style="background-color: transparent; border: 0;" onclick="return confirm('Yakin hapus');"><i class="red trash alternate icon"></i></button>

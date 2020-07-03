@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Baby;
 use Illuminate\Support\Facades\Input;
+use DB;
 
 class BabiesController extends Controller
 {
@@ -64,6 +65,17 @@ class BabiesController extends Controller
 
         return redirect()->route('babies.index');
 
+    }
+
+    public function edit($id)
+    {
+        $p = Baby::find($id);
+        return view('Data Anak/edit',compact('p'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
     }
 
     
