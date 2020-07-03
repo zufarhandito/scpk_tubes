@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('apps.name', 'Poscandu.com') }}</title>
+    <title>{{ config('apps.name', 'Posyandu Bimomartani') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,16 +35,16 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         .checked {
-            color: orange;
+            color: #FF4500;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #245B43">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1E90FF">
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: white; font-size: 20px;">
                     <i class="location arrow icon"></i>
-                    <b> {{ config('apps.name', 'Poscandu.com') }} </b>
+                    <b> {{ config('apps.name', 'Posyandu Bimomartani') }} </b>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -78,7 +78,7 @@
                 </div>
         </nav>
         @auth
-        <div style="background-color: #377559">
+        <div style="background-color: #87CEEB">
             <div class="container" style=" height: 45px; font-size: 15px">
                 <ul class="nav nav-pills" id="navbars" style="padding-top: 3px; padding-bot: 3px;">
                     <li class="nav-item">
@@ -87,13 +87,7 @@
                             Data Anak
                         </a>
                     </li>
-                    <li class="nav-item" style="color: white">
-                        <a class="nav-link" href="{{ url('baby') }}" style="color: white">
-                            <i class="address book outline icon" ></i>
-                            Tambah Admin
-                        </a>
-                    </li>
-                </ul>
+                                    </ul>
             </div>
         </div>
         @endauth
