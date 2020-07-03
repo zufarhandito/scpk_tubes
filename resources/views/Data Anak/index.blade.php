@@ -57,7 +57,7 @@
                                     </form>   
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
-                                    <a href="{{ route('babies.destroy',$p->id) }}" ><i class="red trash alternate icon"></i></a>
+                                    <a href="{{ route('babies.destroy',$p->id) }}" onclick="return confirm('Yakin hapus');" ><i class="red trash alternate icon"></i></a>
                                 </td>
                             </tr>
                             @endforeach
