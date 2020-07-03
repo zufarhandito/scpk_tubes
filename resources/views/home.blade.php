@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mt-4">
     <div class="container">
-        <h4 style="color:#245B43">Welcome, <strong>Admin</strong>  </h4>
+        <h4 style="color:#245B43">Welcome back, <strong>{{ Auth::user()->name }}</strong>  </h4>
     </div>
     <br>
     <section class="jumbotron text-center" style="background-color: white">

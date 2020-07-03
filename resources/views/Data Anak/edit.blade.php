@@ -14,8 +14,9 @@
        </ul>
    </div>
    @endif
-   <form action="" method="post" enctype="multipart/form-data">
+   <form action="{{ route('babies.update', $p->id) }}" method="post" enctype="multipart/form-data">
        {{ csrf_field() }}
+       {{ method_field('PUT') }}
        <div class="form-group">
            <label for="name">Nama Bayi:</label>
            <input type="text" class="form-control" id="" name="name" value="{{ $p->name }}">
