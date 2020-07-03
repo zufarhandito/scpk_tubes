@@ -54,9 +54,7 @@
                                 <td style="font-size: 20px">
                                     <a href="{{ route('babies.edit', $p->id) }}"><i class="blue edit icon"></i></a> |
                                     <form action="{{ route('babies.edit', $p->id)}}" method="post" class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" style="background-color: transparent; border: 0;" onclick="return confirm('Yakin hapus');"><i class="red trash alternate icon"></i></button>
+                                        <a href="{{ route('babies.destroy', $p->id) }}"><i class="red trash alternate icon"></i></a>
                                     </form>   
                                 </td>
                             </tr>
