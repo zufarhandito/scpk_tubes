@@ -73,9 +73,30 @@ class BabiesController extends Controller
         return view('Data Anak/edit',compact('p'));
     }
 
-    public function update(Request $request, $id)
+    public function update($id, Request $request)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required|alpha',
+            'gender' => 'required',
+            'age' => 'required',
+            'height' => 'required|numeric',
+            'weight' => 'required|numeric',
+            'dad' => 'required|alpha',
+            'mom' => 'required|alpha', 
+            'address' =>'required'
+        ]);
+    
+        $p = Baby::find($id);
+        $p->name = $request->name;
+        $p->gender = $request->gender;
+        $p->age = $request->age;
+        $p->height = $request->height;
+        $p->weight= $request->weight;
+        $p->dad = $request->dad;
+        $p->mom = $request->mom;
+        $p->address = $request->address;
+        $p->save();
+        return redirect('home');
     }
 
     
