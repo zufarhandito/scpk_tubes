@@ -54,8 +54,10 @@
                                 <td style="font-size: 20px">
                                     <a href="{{ route('babies.edit', $p->id) }}"><i class="blue edit icon"></i></a> |
                                     <form action="{{ route('babies.edit', $p->id)}}" method="post" class="d-inline">
-                                        <a href="{{ route('babies.destroy', $p->id) }}"><i class="red trash alternate icon"></i></a>
                                     </form>   
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <a href="{{ route('babies.destroy',$p->id) }}" ><i class="red trash alternate icon"></i></a>
                                 </td>
                             </tr>
                             @endforeach

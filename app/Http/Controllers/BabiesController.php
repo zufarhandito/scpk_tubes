@@ -9,6 +9,13 @@ use DB;
 
 class BabiesController extends Controller
 {
+    public function show($id)
+    {
+        $p = Baby::find($id);
+        $p->delete();
+        return redirect('babies');
+    }
+
     public function index()
     {
         $baby = baby::paginate(4);
@@ -101,8 +108,6 @@ class BabiesController extends Controller
 
     public function destroy($id)
     {
-        $p = Baby::find($id);
-        $p->delete();
-        return redirect('index');
+
     }
 }
