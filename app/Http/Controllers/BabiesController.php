@@ -99,5 +99,10 @@ class BabiesController extends Controller
         return redirect('home');
     }
 
-    
+    public function destroy($id)
+    {
+        $p = Baby::find($id);
+        $p->delete();
+        return redirect('index');
+    }
 }
