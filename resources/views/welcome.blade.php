@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Poscandu
+                    Posyandu Bimomartani
                 </div>
             </div>
         </div>
