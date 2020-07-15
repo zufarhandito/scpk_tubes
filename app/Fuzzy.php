@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Fuzzy extends Model
+class fuzzy extends Model
 {
-    //
+    protected $fillable =['value'];
+
 }

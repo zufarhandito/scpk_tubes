@@ -23,10 +23,9 @@
                                 <th rowspan="2" class="text-center" scope="col" style="font-size: 17px; ">ID</th>
                                 <th rowspan="2" style="font-size: 17px;">Nama Bayi</th>
                                 <th rowspan="2" scope="col" style="font-size: 17px;">Jenis Kelamin</th>
-                                <th rowspan="2" style="font-size: 17px;">Tanggal Lahir</th>                                
+                                <th rowspan="2" style="font-size: 17px;">Bulan Lahir</th>                                
                                 <th rowspan="2" scope="col" style="font-size: 17px;">Tinggi Badan</th>
-                                <th rowspan="2" scope="col" style="font-size: 17px;">Berat Badan</th>
-                                <th rowspan="2" scope="col" style="font-size: 17px;">Status Gizi</th>                                
+                                <th rowspan="2" scope="col" style="font-size: 17px;">Berat Badan</th>                              
                                 <th colspan="2" scope="col" style="font-size: 17px;">Nama Orang Tua</th>                                <th rowspan="2" scope="col" style="font-size: 17px;">Alamat</th>
                                 <th rowspan="2" scope="col" style="font-size: 17px; width: 150px">Aksi</th>
                             </tr>
@@ -47,7 +46,6 @@
                                 <td>{{ $p->age}}</td>
                                 <td>{{ $p->height }}</td>
                                 <td>{{ $p->weight}}</td>
-                                <td><a href="{{ url('/fuzzy', $p->id) }}">status</a></td>
                                 <td>{{ $p->dad}}</td>
                                 <td>{{ $p->mom }}</td>
                                 <td>{{ $p->address }}</td>
@@ -57,7 +55,8 @@
                                     </form>   
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
-                                    <a href="{{ route('babies.destroy',$p->id) }}" onclick="return confirm('Yakin hapus');" ><i class="red trash alternate icon"></i></a>
+                                    <a href="{{ route('babies.destroy',$p->id) }}" onclick="return confirm('Yakin hapus');" ><i class="red trash alternate icon"></i></a> | 
+                                    <a href="{{ url('/fuzzy', $p->id) }}">Status</a>
                                 </td>
                             </tr>
                             @endforeach

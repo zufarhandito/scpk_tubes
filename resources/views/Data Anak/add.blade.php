@@ -30,11 +30,11 @@
             <input type="text" class="form-control" id="" name="age">
         </div>
         <div class="form-group">
-            <label for="name">Tinggi Badan:</label>
+            <label for="name">Tinggi Badan (m):</label>
             <input type="text" class="form-control" id="" name="height">
         </div>                
        <div class="form-group">
-            <label for="day">Berat Badan: </label>
+            <label for="day">Berat Badan (kg): </label>
             <input type="text" class="form-control" id="" name="weight">
         </div>
        <div class="form-group">

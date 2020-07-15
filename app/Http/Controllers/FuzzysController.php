@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use App\Baby;
+use App\fuzzy;
  
  
 class FuzzysController extends Controller
 {  
 
-    public function calculate($id)
+    public function calculate($id, Request $request)
     {
  
         $data = Baby::find($id);  
@@ -366,16 +367,16 @@ class FuzzysController extends Controller
         $hasil = $temp1 / $temp2;
         // return $hasil;
 
+        // Apakah status berdasar nilai gizi
         $p = Baby::find($id);
         if($hasil<=60){
-            $adalah = 'gizi buruk';
-        }else if($hasil>60 && $hasil<=70){
+            $adalah = 'gizi kurang';
+        }else if($hasil>60 && $hasil=80){
             $adalah = 'gizi normal';
-        }else if ($hasil>70 && $hasil<=80) {
-            $adalah = 'gizi seimbang';
         }else{
             $adalah = 'obesitas';
         }
+
         return view('Data Anak/fuzzyView',compact('hasil','adalah','p'));
     }
  
